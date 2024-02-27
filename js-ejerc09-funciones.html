@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Reemplazar caracteres en una frase</title> 
+</head>
+<body> 
+    <button id="miBoton" onclick="ejecutarPrograma()">Haz clic para ejecutar el programa</button>
+
+    <script> 
+        function ejecutarPrograma() {
+            var frase = prompt("Por favor, ingresa una frase:");
+
+            var frase_nueva = "";
+
+            for (var i in frase) {
+                document.write("Revisando carácter: " + frase[i] + "<br>");
+
+                if (frase[i] === 'a') {
+                    frase_nueva += 'u';
+                } else {
+                    frase_nueva += frase[i];
+                }
+            }
+
+            document.write("<h1>Frase modificada:</h1>");
+            document.write("<p>" + frase_nueva + "</p>");
+        } 
+    </script> 
+</body>
+</html>

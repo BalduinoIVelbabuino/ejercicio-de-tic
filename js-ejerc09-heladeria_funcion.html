@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Helados</title>
+    <script>
+        function calcularPrecio() {
+            var tamaño = document.getElementById("tamaño").value;
+            var sabor = document.getElementById("sabor").value;
+            var topping = document.getElementById("topping").value;
+
+            var precioBase = 0;
+            var precioTopping = 0;
+
+            switch (tamaño) {
+                case "pequeño":
+                    precioBase = 1;
+                    break;
+                case "mediano":
+                    precioBase = 2;
+                    break;
+                case "grande":
+                    precioBase = 3;
+                    break;
+                default:
+                    document.getElementById("resultado").innerHTML = "Tamaño de helado incorrecto";
+                    return; 
+            }
+
+            if (sabor === "fresa" || sabor === "pistacho") {
+                precioBase += 1;
+            }
+
+            if (topping === "nueces" || topping === "sprinkles") {
+                precioTopping = 0.5;
+            } else if (topping === "fudge" || topping === "caramel") {
+                precioTopping = 0.3;
+            }
+
+            var precioTotal = precioBase + precioTopping;
+
+            document.getElementById("resultado").innerHTML = "Precio del helado: " + precioTotal.toFixed(2) + "€";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="tamaño">Tamaño del helado:</label>
+        <select id="tamaño" name="tamaño">
+            <option value="pequeño">Pequeño</option>
+            <option value="mediano">Mediano</option>
+            <option value="grande">Grande</option>
+        </select><br>
+
+        <label for="sabor">Sabor del helado:</label>
+        <select id="sabor" name="sabor">
+            <option value="chocolate">Chocolate</option>
+            <option value="vainilla">Vainilla</option>
+            <option value="fresa">Fresa (+1€)</option>
+            <option value="pistacho">Pistacho (+1€)</option>
+        </select><br>
+
+        <label for="topping">Topping del helado:</label>
+        <select id="topping" name="topping">
+            <option value="fudge">Fudge (+0.3€)</option>
+            <option value="caramel">Caramel (+0.3€)</option>
+            <option value="nueces">Nueces (+0.5€)</option>
+            <option value="sprinkles">Sprinkles (+0.5€)</option>
+        </select><br>
+
+        <button type="button" onclick="calcularPrecio()">Calcular Precio</button>
+    </form>
+
+    <div id="resultado"></div>
+</body>
+</html>

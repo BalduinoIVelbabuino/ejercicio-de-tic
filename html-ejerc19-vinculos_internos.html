@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enlaces con imágenes y vínculos internos</title>
+<style>
+  body {
+    margin: 5px;
+    padding: 5px;
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    font-weight: bold;
+    background-color: orange;
+    color: black;
+    padding: 5px;
+    width: fit-content;
+  }
+  h1:hover {
+    background-color: black;
+    color: orange;
+  }
+  p {
+    margin: 5px;
+    padding: 5px;
+  }
+  .img-centrada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 600px;
+  }
+  #top-websites {
+    border-style: dashed;
+    border-width: 5px;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .boton {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: black;
+  }
+  .boton:hover {
+    background-color: black;
+    color: orange;
+  }
+</style>
+</head>
+<body>
+
+<h1 id="openai">OpenAI</h1>
+<p>OpenAI es una empresa de investigación en inteligencia artificial con el objetivo de asegurar que el desarrollo de la IA beneficie a toda la humanidad.</p>
+<a href="https://www.openai.com"><img class="img-centrada" src="openai_screenshot.jpg" alt="OpenAI" width="600"></a>
+
+<h1 id="wikipedia">Wikipedia</h1>
+<p>Wikipedia es una enciclopedia en línea, multilingüe y de acceso gratuito basada en un modelo wiki. Es una de las webs más populares en Internet.</p>
+<a href="https://www.wikipedia.org"><img class="img-centrada" src="wikipedia_screenshot.jpg" alt="Wikipedia" width="600"></a>
+
+<h1 id="github">GitHub</h1>
+<p>GitHub es una plataforma de desarrollo colaborativo de software que utiliza el sistema de control de versiones Git. Ofrece alojamiento de código para proyectos de desarrollo de software.</p>
+<a href="https://github.com"><img class="img-centrada" src="github_screenshot.jpg" alt="GitHub" width="600"></a>
+
+<h1 id="stackoverflow">Stack Overflow</h1>
+<p>Stack Overflow es una comunidad en línea para programadores, donde pueden hacer preguntas, responderlas y aprender de otras personas.</p>
+<a href="https://stackoverflow.com"><img class="img-centrada" src="stackoverflow_screenshot.jpg" alt="Stack Overflow" width="600"></a>
+
+<ol id="top-websites">
+  <li><a href="#openai" class="boton">1. OpenAI</a></li>
+  <li><a href="#wikipedia" class="boton">2. Wikipedia</a></li>
+  <li><a href="#github" class="boton">3. GitHub</a></li>
+  <li><a href="#stackoverflow" class="boton">4. Stack Overflow</a></li>
+</ol>
+
+</body>
+</html>

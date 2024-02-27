@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Cadenas de Caracteres</title>
+</head>
+<body>
+    <h1>Ejercicio 5 - Cadenas de Caracteres</h1>
+
+    <p>Este script pide al usuario si quiere jugar. Si el usuario responde 's', se le pide  el nombre de una fruta. Luego, segun la fruta, se muestra el precio por kilogramo. Finalmente, se le pregunta al usuario si hay algo más que quiera consultar. Si responde 'si', se muestra un mensaje mostrando que no hay tiempo para responder en ese momento, si no, salta un mensaje de agradecimiento. Si el usuario responde 'n' o cualquier otra cosa que no sea 's', se muestra un mensaje mostrando que es una pena que no quiera participar.</p>
+
+    <script>
+        let jugar = prompt("Este programa funciona tomando decisiones, ¿quieres jugar? Responde con una s minúscula si es que sí o con una n mayúscula si es que no");
+
+        if (jugar === 's') {
+            var fruta = prompt("Introduce el nombre de una fruta que desees con la primera letra en mayúscula");
+
+            switch (fruta) {
+                case 'Naranjas':
+                    alert('El kilogramo de naranjas cuesta $0.59.');
+                    break;
+                case 'Manzanas':
+                    alert('El kilogramo de manzanas cuesta $0.32.');
+                    break;
+                case 'Platanos':
+                    alert('El kilogramo de platanos cuesta $0.48.');
+                    break;
+                case 'Cerezas':
+                    alert('El kilogramo de cerezas cuesta $3.00.');
+                    break;
+                case 'Mangos':
+                case 'Papayas':
+                    alert('El kilogramo de mangos y papayas cuesta $2.79.');
+                    break;
+                default:
+                    alert('Lo lamentamos, por el momento no disponemos de ' + fruta + '.');
+            }
+
+            var respuesta = prompt("¿Hay algo más que te quisiera consultar?, responde si o no");
+
+            if (respuesta === "si") {
+                alert("No tenemos tiempo para responderte en este momento. Gracias");
+            } else {
+                alert("Muchas gracias por tu consulta");
+            }
+        } else {
+            alert("Es una pena que no quieras participar. Quizás para la siguiente");
+        }
+    </script>
+</body>
+</html>
